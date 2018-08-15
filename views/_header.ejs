@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+          <title>TurDGO</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="views/estilos.css">
+        </head>
+     <style type="text/css">
+             body{
+                    background-image: url("https://png.pngtree.com/element_origin_min_pic/16/08/26/1757c006d02f7b9.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: black;
+                    color:  #103F47;
+                    font-weight: 900;
+    
+            }
+            #chat{
+                height: 400px;
+                border: 1px  solid #000;
+                width:20%;
+            }
+            #message-box {
+                width: 20%;
+
+            }
+                    
+                h1 {
+                color: #1B7E8E;
+                 font-size: 250%;
+                font-style: oblique;
+
+            }
+                h3 {
+                     color:  #1B7E8E;
+                }
+                container {
+                     padding: 10px;
+                     color: #6CC6CC;
+                }
+
+                .peque {
+                     width: 5%;
+                }
+
+                ////////////////
+
+                
+
+            .content-all{
+                width: 20%;
+                margin: 100px;
+                perspective: 15000px;
+                position: inherit;
+                margin-top:50px;
+            
+                
+                
+                
+            }
+
+            .content-carrousel{
+                width:220px;
+                position: absolute;
+                animation: rotar 40s infinite linear;
+                transform-style: preserve-3d;
+                
+            }
+
+            .content-carrousel figure{
+                width:65px;
+                height:50px;
+                position: absolute;
+            
+                
+            
+            }
+
+
+
+
+            .content-carrousel:hover{
+                animation-play-state: paused;
+            }
+
+
+            .
+
+
+
+
+
+            .content-carrousel figure:nth-child(0){
+                transform: rotateY(0deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(1){
+                transform: rotateY(72deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(2){
+                transform: rotateY(108deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(3){
+                transform: rotateY(144deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(4){
+                transform: rotateY(180deg)translateZ(360px);
+            }
+
+            .content-carrousel figure:nth-child(5){
+                transform: rotateY(216deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(6){
+                transform: rotateY(252deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(7){
+                transform: rotateY(288deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(8){
+                transform: rotateY(324deg)translateZ(360px);
+            }
+            .content-carrousel figure:nth-child(9){
+                transform: rotateY(360deg)translateZ(360px);
+            }
+
+
+
+
+
+
+            .content-carrousel img{
+                width: 300%;
+                    transition: all 300ms;
+            
+
+            }
+
+            .content-carrousel img:hover{
+            transform: scale(1.2);
+                transition: all 300ms;
+                
+            }
+
+
+            @keyframes rotar{
+                from{
+                    transform: rotateY(0deg);
+                }to{
+                    transform: rotateY(360deg);
+                }
+            }
+
+
+     </style>
+
+
+        <body>
+
+
+<div class=" navbar-static-top" role="navigation"></div> 
+ <div class="container">
+     <div class="navbar-header">
+        <a class="navbar-brand" href="/">Turismo Durango</a>
+    
+     <ul class="nav navbar-nav navbar-right">
+         <% if (currentUsuario){%>
+        <li>
+            <a href="/edit">
+            Bienvenido currentUsuario.name()%>
+           
+            </a>
+        </li>
+        <li>
+            <a href="/addhoteles">Agregar Hotel</a>
+
+        </li>
+        <li>
+            <a href="/addentretenimiento">Agregar entretenimiento</a>
+        </li>
+        <li>
+            <a href="hoteles">Hoteles</a>
+        </li>
+        <li>
+            <a href="/entretenimientos">Entretenimiento</a>
+        </li>
+        <li>
+            <a href="/singup">Registro</a>
+        </li>
+                <li>
+            <a href="/logout">Salir</a>
+        </li>
+   <%}else{%>
+    <li>
+        <a href="/login">Entrar</a>
+    </li>
+     <li>
+        <a href="hoteles">Hoteles</a>
+    </li>
+    <li>
+        <a href="/entretenimientos">Entretenimiento</a>
+    </li>
+       <li>
+        <a href="/chat">chat</a>
+    </li>
+ 
+  <%}%>
+     </ul>
+ </div> 
+</div>
+<div class="container">
+    <% errors.forEach(function(error){%>
+        <div class="alert alert-danger" role="alert">
+            <%= error%>
+        </div>
+        <%})%>
+      <% infos.forEach(function(info){%>
+        <div class="alert alert-danger" role="alert">
+            <%= info%>
+        </div>
+      <%})%> 

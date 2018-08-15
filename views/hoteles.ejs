@@ -1,0 +1,89 @@
+<%include _header%>
+<center>
+<h1>Hoteles</h1>
+<h1>_________________________________________________</h1>
+<br>
+<br>
+</center>
+  <div class="row">
+            <div class="col-md-5">
+                </div>
+                    <div class="col-md-4">
+            <center>
+                    <div class="content-all">
+                    <div class="content-carrousel">
+                        
+                        <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/38754421_1816866605046502_606399307171495936_n.jpg?_nc_cat=0&oh=3e32b01424d1d0767f1ab5c6c712ab98&oe=5C09E98F" >  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/14095699_249852495414251_4225936890130113616_n.jpg?_nc_cat=0&oh=02c2322b37cb04e1c4aacdc287802e42&oe=5C13D053">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/37600684_1074155899398661_6524816876160155648_n.jpg?_nc_cat=0&oh=e36a3c59d8bff3f3854a3931f5d97e61&oe=5BF7727F">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/15390979_580869085438680_3167480942741190258_n.jpg?_nc_cat=0&oh=fb196152cf301b04a7db59ed25baa9a0&oe=5BF45117">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/19366177_1823553461295488_6745858946473434575_n.jpg?_nc_cat=0&oh=f9038229b3d1bf5710ab803f21ad99d7&oe=5C015A17">  </figure>
+                        <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/33430118_1952989414763353_3634762618524139520_n.jpg?_nc_cat=0&oh=839bb8bd2dee0531d9e75af118b933bf&oe=5C0A9FC3">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/35237516_1730435287039428_7600652002795716608_n.jpg?_nc_cat=0&oh=2f402e04def401bf1fd15084e138a5ca&oe=5C02F6D3">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/37300463_1783855321697424_6095288776119025664_n.jpg?_nc_cat=0&oh=b850454f6761b4b90f291690530d59af&oe=5C077380">  </figure>
+                         <figure><img src="https://scontent.fdgo1-1.fna.fbcdn.net/v/t1.0-9/17021595_1004508106360244_3715945584515955367_n.jpg?_nc_cat=0&oh=e4225d099093164434b3195e6df4fe12&oe=5BFDEC9A">  </figure>
+                         <figure><img src="http://cadurango.mx/dgo/imagenes/1.png">  </figure>
+                
+                        </div>
+                    
+                    </div>
+                    
+                     </center>
+                     </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="col-md-3">
+
+</div>
+
+    <div class="col-md-8">
+                
+<% hoteles.forEach((hotel)=>{%>
+<div class="panel panel-default">
+    <div class="panel-heading">
+    <% if(hotel.descripcion){%>
+    <div class="panel-body">
+   <h2> <%= hotel.nombre%></h2> </div>
+   <div class="col-md-3">
+<img src="https://picsum.photos/150/200/?random" class="img-responsive img-circle">
+</div>
+
+        <a>Descripcion: </a><p><%= hotel.descripcion%>    
+        <br>
+        <a>Direccion:<p> <%= hotel.direccion%></p></a> <br>
+        <a>Numero: <p><%= hotel.numero%></p></a>
+        <br>
+        <a>Calidad: </a>  <a>***** (<%= hotel.calidad%>)</a>
+        <br>
+       
+       <br>
+<br>
+<br>
+<br>
+<br>
+    </div>
+
+    <%}%>
+</div>
+
+<%})%>
+
+
+<% include _footer%>

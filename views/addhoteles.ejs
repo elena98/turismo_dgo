@@ -1,0 +1,39 @@
+<%include _header%>
+<center>
+<h1>Nuevo Hotel</h1>
+<h3>_________________________________________________<h3>
+</center>
+<form action="/addhoteles" method="post">
+<div class="col-md-4">
+</div>
+<div class="col-md-6">
+<center>
+<div class="col-md-8">
+<div class="form-group" >
+    <input name= "nombre" type= "text" class= "form-control" placeholder= "NOMBRE DEL HOTEL" required autofocus>
+</div>
+<div class="form-group">
+    <input name= "descripcion" type= "text" class= "form-control" placeholder= "DESCRIPCION" required autofocus>
+</div>
+<div class="form-group"> 
+    <input name= "direccion" type= "text" class= "form-control" placeholder= "DIRECCION DEL HOTEL" required autofocus>
+</div>
+<div class="form-group">
+    <input name= "numero" type= "number" class= "form-control" placeholder= "TELEFONO" required autofocus>
+</div>
+<div class="form-group">
+    <input name= "calidad" type= "number" class= "form-control" placeholder= "CALIDAD" required autofocus>
+</div>
+
+<div class="col-md-3">
+</div>
+<center>
+<div class="col-md-5">
+<input type= "submit" value= "Registrar Hotel" class= "btn btn-primary btn-block">
+</div>
+</div>
+</center>
+</div>
+</form>
+
+<%include _footer%>

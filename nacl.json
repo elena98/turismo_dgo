@@ -1,0 +1,105 @@
+[{
+    "group":"invitado",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"logout",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"hoteles",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"entretenimientos",
+        "methods":["GET","POST"],
+        "action":"allow"
+    },{
+        "resource":"chat",
+        "methods":["GET","POST"],
+        "action":"allow"
+    }]
+},{
+    "group":"admin",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+        },{
+            "resource":"logout",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"hoteles",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"entretenimientos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addhoteles",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addentretenimiento",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"singup",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        }]
+},{
+    "group":"hotel",
+    "permissions":[{
+        "resource":"login",
+        "methods":["GET","POST"],
+        "action":"allow"
+        },{
+            "resource":"logout",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"hoteles",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"entretenimientos",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        },{
+            "resource":"addhoteles",
+            "methods":["GET","POST","PUT"],
+            "action":"allow"
+        }]
+},{
+        "group":"entertainment",
+        "permissions":[{
+            "resource":"login",
+            "methods":["GET","POST"],
+            "action":"allow"
+            },{
+                "resource":"logout",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"hoteles",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"entretenimientos",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            },{
+                "resource":"addentretenimiento",
+                "methods":["GET","POST","PUT"],
+                "action":"allow"
+            }]
+
+}]
+        
+    
+    

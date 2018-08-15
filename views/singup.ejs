@@ -1,0 +1,29 @@
+<% include _header %>
+
+<h1>Registro de nuevos administradores.</h1>
+
+<form action="/singup" method="post">
+    <div class="form-group">
+        <input name="username" type="text"class="form-control"
+        placeholder="Nombre de usuario" required autofocus/>
+    </div>
+    <div class="form-group">
+       <input name="password" type="password" class="form-control" placeholder="password" required autofocus/>
+    </div>
+<select name='role' class="form-control">
+  <option value="admin">admin</option>
+  <option value="hotel">Hoteleria</option>
+  <option value="entertainment">Entretenimiento</option>
+  <option value="invitado">invitado</option>
+</select>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <input type="submit" value="Registrate" class="btn btn-primary btn-block"/>
+</form>
+
+<% include _footer %>
